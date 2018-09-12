@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>05_components_composing</title>
+</head>
+<body>
+
+  <div id="example"></div>
+
+  <script type="text/javascript" src="../js/react.development.js"></script>
+  <script type="text/javascript" src="../js/react-dom.development.js"></script>
+  <script type="text/javascript" src="../js/prop-types.js"></script>
+  <script type="text/javascript" src="../js/babel.min.js"></script>
+  <script type="text/babel">
+     class App extends React.Component {
+       constructor (props){
+         super(props);
+         //初始化状态
+         this.state={
+           todos:['吃饭','睡觉','打豆豆']
+         }
+         this.add=this.add.bind(this)
+       }
+       add (todo){
+         const {todos} =this.state;
+       }
+     }
+  </script>
+</body>
+</html>
